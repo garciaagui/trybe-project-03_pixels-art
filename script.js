@@ -1,5 +1,6 @@
 const colorPallete = document.getElementById('color-palette');
 const pixelsBoard = document.getElementById('pixel-board');
+const clearButton = document.getElementById('clear-board');
 
 function createColorPallete() {
   for (let i = 1; i <= 4; i += 1) {
@@ -28,7 +29,7 @@ function generatePixels() {
 
 const pixelsCreated = document.getElementsByClassName('pixel');
 
-function whiteColorOnload() {
+function whiteAllPixels() {
   for (let i = 0; i < pixelsCreated.length; i += 1) {
     pixelsCreated[i].style.backgroundColor = 'white';
   }
@@ -53,7 +54,7 @@ function paintPixel(event) {
 createColorPallete();
 setColors();
 generatePixels();
-window.addEventListener('load', whiteColorOnload);
+window.addEventListener('load', whiteAllPixels);
 window.addEventListener('load', selectBlackColorFirst);
 createdPalleteElements[0].addEventListener('click', changePainter);
 createdPalleteElements[1].addEventListener('click', changePainter);
@@ -62,3 +63,4 @@ createdPalleteElements[3].addEventListener('click', changePainter);
 for (let i = 0; i < pixelsCreated.length; i += 1) {
   pixelsCreated[i].addEventListener('click', paintPixel);
 }
+clearButton.addEventListener('click', whiteAllPixels);
