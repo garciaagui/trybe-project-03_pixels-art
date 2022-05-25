@@ -44,6 +44,11 @@ function changePainter(event) {
   event.target.classList.add('selected');
 }
 
+function paintPixel(event) {
+  const colorSelected = document.querySelector('.selected').style.backgroundColor;
+  event.target.style.backgroundColor = colorSelected;
+}
+
 // Ativação das Funções...
 createColorPallete();
 setColors();
@@ -54,3 +59,6 @@ createdPalleteElements[0].addEventListener('click', changePainter);
 createdPalleteElements[1].addEventListener('click', changePainter);
 createdPalleteElements[2].addEventListener('click', changePainter);
 createdPalleteElements[3].addEventListener('click', changePainter);
+for (let i = 0; i < pixelsCreated.length; i += 1) {
+  pixelsCreated[i].addEventListener('click', paintPixel);
+}
