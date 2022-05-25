@@ -4,3 +4,14 @@
   width: 60px;
   display: inline-block;
 }
+
+.pixel {
+  border: solid black 1px;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+}
+
+#pixel-board {
+  border: solid red 1px;
+}
