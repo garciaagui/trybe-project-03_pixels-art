@@ -9,8 +9,9 @@ function createColorPallete() {
   }
 }
 
+const createdPalleteElements = document.getElementsByClassName('color');
+
 function setColors() {
-  const createdPalleteElements = document.getElementsByClassName('color');
   createdPalleteElements[0].style.backgroundColor = 'black';
   createdPalleteElements[1].style.backgroundColor = '#2A9D8F';
   createdPalleteElements[2].style.backgroundColor = '#E9C46A';
@@ -33,7 +34,12 @@ function whiteColorOnload() {
   }
 }
 
+function selectBlackColorFirst() {
+  createdPalleteElements[0].classList.add('selected')
+}
+
 createColorPallete();
 setColors();
 generatePixels();
 window.addEventListener('load', whiteColorOnload);
+window.addEventListener('load', selectBlackColorFirst);
