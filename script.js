@@ -35,11 +35,22 @@ function whiteColorOnload() {
 }
 
 function selectBlackColorFirst() {
-  createdPalleteElements[0].classList.add('selected')
+  createdPalleteElements[0].classList.add('selected');
 }
 
+function changePainter(event) {
+  const hadSelectedClass = document.querySelector('.selected');
+  hadSelectedClass.classList.remove('selected');
+  event.target.classList.add('selected');
+}
+
+// Ativação das Funções...
 createColorPallete();
 setColors();
 generatePixels();
 window.addEventListener('load', whiteColorOnload);
 window.addEventListener('load', selectBlackColorFirst);
+createdPalleteElements[0].addEventListener('click', changePainter);
+createdPalleteElements[1].addEventListener('click', changePainter);
+createdPalleteElements[2].addEventListener('click', changePainter);
+createdPalleteElements[3].addEventListener('click', changePainter);
