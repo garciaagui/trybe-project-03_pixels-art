@@ -1,23 +1,23 @@
-const colorPallete = document.getElementById('color-palette');
+const paletteElements = document.getElementsByClassName('color');
 const pixelsBoard = document.getElementById('pixel-board');
 const clearButton = document.getElementById('clear-board');
 const generateBoardInput = document.getElementById('board-size');
 const generateBoardButton = document.getElementById('generate-board');
 
-function createColorPallete() {
-  for (let i = 1; i <= 4; i += 1) {
-    const newPalleteElement = document.createElement('section');
-    newPalleteElement.setAttribute('class', 'color');
-    colorPallete.appendChild(newPalleteElement);
+function generateRandomColors() {
+  const hexComposition = 'aAbBcCdDeEfF0123456789';
+  let randomColor = '#';
+  for (let i = 1; i <= 6; i += 1) {
+    randomColor += hexComposition[Math.floor(Math.random() * hexComposition.length)];
   }
+  return randomColor;
 }
-const createdPalleteElements = document.getElementsByClassName('color');
 
 function setColors() {
-  createdPalleteElements[0].style.backgroundColor = 'black';
-  createdPalleteElements[1].style.backgroundColor = '#2A9D8F';
-  createdPalleteElements[2].style.backgroundColor = '#E9C46A';
-  createdPalleteElements[3].style.backgroundColor = '#E76F51';
+  paletteElements[0].style.backgroundColor = 'black';
+  paletteElements[1].style.backgroundColor = generateRandomColors();
+  paletteElements[2].style.backgroundColor = generateRandomColors();
+  paletteElements[3].style.backgroundColor = generateRandomColors();
 }
 
 function generatePixels() {
@@ -36,9 +36,6 @@ function removePixelBoardChilds() {
   while (pixelsBoard.firstChild) {
     pixelsBoard.removeChild(pixelsBoard.firstChild);
   }
-  // for (let i = 0; i < pixelsBoard.length; i += 1) {
-  //   pixelsBoard.remove(pixelsBoard.lastChild);
-  // }
 }
 
 function regulateInputValue(n) {
@@ -78,7 +75,7 @@ function whiteAllPixels() {
 }
 
 function selectBlackColorFirst() {
-  createdPalleteElements[0].classList.add('selected');
+  paletteElements[0].classList.add('selected');
 }
 
 function changePainter(event) {
@@ -93,15 +90,14 @@ function paintPixel(event) {
 }
 
 // Ativação das Funções...
-createColorPallete();
 setColors();
 generatePixels();
 window.addEventListener('load', whiteAllPixels);
 window.addEventListener('load', selectBlackColorFirst);
-createdPalleteElements[0].addEventListener('click', changePainter);
-createdPalleteElements[1].addEventListener('click', changePainter);
-createdPalleteElements[2].addEventListener('click', changePainter);
-createdPalleteElements[3].addEventListener('click', changePainter);
+paletteElements[0].addEventListener('click', changePainter);
+paletteElements[1].addEventListener('click', changePainter);
+paletteElements[2].addEventListener('click', changePainter);
+paletteElements[3].addEventListener('click', changePainter);
 for (let i = 0; i < pixelsCreated.length; i += 1) {
   pixelsCreated[i].addEventListener('click', paintPixel);
 }
