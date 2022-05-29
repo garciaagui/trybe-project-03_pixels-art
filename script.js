@@ -1,6 +1,8 @@
 const colorPallete = document.getElementById('color-palette');
 const pixelsBoard = document.getElementById('pixel-board');
 const clearButton = document.getElementById('clear-board');
+const generateBoardInput = document.getElementById('board-size');
+const generateBoardButton = document.getElementById('generate-board');
 
 function createColorPallete() {
   for (let i = 1; i <= 4; i += 1) {
@@ -9,7 +11,6 @@ function createColorPallete() {
     colorPallete.appendChild(newPalleteElement);
   }
 }
-
 const createdPalleteElements = document.getElementsByClassName('color');
 
 function setColors() {
@@ -20,10 +21,38 @@ function setColors() {
 }
 
 function generatePixels() {
-  for (let i = 1; i <= 25; i += 1) {
-    const newPixel = document.createElement('section');
-    newPixel.setAttribute('class', 'pixel');
-    pixelsBoard.appendChild(newPixel);
+  for (let i = 1; i <= 5; i += 1) {
+    const newPixelLine = document.createElement('section');
+    for (let index = 1; index <= 5; index += 1) {
+      const newPixel = document.createElement('section');
+      newPixel.setAttribute('class', 'pixel');
+      newPixelLine.appendChild(newPixel);
+    }
+    pixelsBoard.appendChild(newPixelLine);
+  }
+}
+
+function removePixelBoardChilds() {
+  while (pixelsBoard.firstChild) {
+    pixelsBoard.removeChild(pixelsBoard.firstChild);
+  }
+  // for (let i = 0; i < pixelsBoard.length; i += 1) {
+  //   pixelsBoard.remove(pixelsBoard.lastChild);
+  // }
+}
+
+function changeBoardSize(n) {
+  removePixelBoardChilds();
+  n = generateBoardInput.value;
+  for (let i = 1; i <= n; i += 1) {
+    const newPixelLine = document.createElement('section');
+    for (let index = 1; index <= n; index += 1) {
+      const newPixel = document.createElement('section');
+      newPixel.setAttribute('class', 'pixel');
+      newPixel.style.backgroundColor = 'white';
+      newPixelLine.appendChild(newPixel);
+    }
+    pixelsBoard.appendChild(newPixelLine);
   }
 }
 
@@ -64,3 +93,10 @@ for (let i = 0; i < pixelsCreated.length; i += 1) {
   pixelsCreated[i].addEventListener('click', paintPixel);
 }
 clearButton.addEventListener('click', whiteAllPixels);
+generateBoardButton.addEventListener('click', function() {
+  if (generateBoardInput.value === 0 || generateBoardInput.value === '') {
+    window.alert('Board inválido!');
+  } else {
+    changeBoardSize();
+  }
+});
