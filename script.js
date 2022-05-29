@@ -41,9 +41,22 @@ function removePixelBoardChilds() {
   // }
 }
 
+function regulateInputValue(n) {
+  if (generateBoardInput.value > 0 && generateBoardInput.value < 5) {
+    n = 5;
+    window.alert('Valor inserido menor que o permitido. Consideramos 5.');
+  } else if (generateBoardInput.value > 50) {
+    n = 50;
+    window.alert('Valor inserido maior que o permitido. Consideramos 50.');
+  } else {
+    n = generateBoardInput.value;
+  }
+  return n;
+}
+
 function changeBoardSize(n) {
   removePixelBoardChilds();
-  n = generateBoardInput.value;
+  n = regulateInputValue();
   for (let i = 1; i <= n; i += 1) {
     const newPixelLine = document.createElement('section');
     for (let index = 1; index <= n; index += 1) {
@@ -93,7 +106,7 @@ for (let i = 0; i < pixelsCreated.length; i += 1) {
   pixelsCreated[i].addEventListener('click', paintPixel);
 }
 clearButton.addEventListener('click', whiteAllPixels);
-generateBoardButton.addEventListener('click', function() {
+generateBoardButton.addEventListener('click', function () {
   if (generateBoardInput.value === 0 || generateBoardInput.value === '') {
     window.alert('Board inválido!');
   } else {
