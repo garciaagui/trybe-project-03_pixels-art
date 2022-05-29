@@ -1,5 +1,6 @@
 // Definição de Variáveis;
 const paletteElements = document.getElementsByClassName('color');
+const generatePaletteButton = document.getElementById('another-palette');
 const pixelsBoard = document.getElementById('pixel-board');
 const pixelsCreated = document.getElementsByClassName('pixel');
 const clearButton = document.getElementById('clear-board');
@@ -111,6 +112,7 @@ setColors();
 generatePixels();
 window.addEventListener('load', whiteAllPixels);
 window.addEventListener('load', selectBlackColorFirst);
+generatePaletteButton.addEventListener('click', setColors);
 for (let i = 0; i < paletteElements.length; i += 1) {
   paletteElements[i].addEventListener('click', changePainter);
 }

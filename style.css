@@ -1,3 +1,25 @@
+* {
+  font-family: Courier New, sans-serif;
+}
+
+body {
+  font-size: large;
+  margin-left: 20px;
+}
+
+#another-palette {
+  display: block;
+}
+
+#another-palette , #generate-board , #clear-board {
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+#pixel-board {
+  margin-top: 15px;
+}
+
 .color , .selected {
   border: solid black 1px;
   height: 60px;
@@ -10,8 +32,4 @@
   height: 40px;
   width: 40px;
   display: inline-block;
-}
-
-#pixel-board {
-  padding: 5px;
 }
