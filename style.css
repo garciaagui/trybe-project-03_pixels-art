@@ -1,30 +1,86 @@
 * {
   font-family: Courier New, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-size: large;
-  margin-left: 20px;
+  font-size: normal;
+  margin: 0 auto;
+  width: 80%;
 }
 
-#another-palette {
-  display: block;
+header {
+  margin: 40px auto 30px;
 }
 
-#another-palette , #generate-board , #clear-board {
-  margin-top: 10px;
+#title {
+  font-size: 2.5em;
+}
+
+#tip {
+  font-style: italic;
+}
+
+#color-palette {
+  margin-bottom: 20px;
+}
+
+.color {
+  border: solid black 1px;
+  display: inline-block;
+  height: 60px;
+  margin-right: 10px;
+  width: 60px;
+}
+
+#board-size-control {
+  margin-bottom: 20px;
+}
+
+#generate-board {
+  cursor: pointer;
+  height: 30px;
+  margin-left: 10px;
+  width: 50px;
+}
+
+#board-size-control label {
   font-size: 0.9em;
 }
 
-#pixel-board {
-  margin-top: 15px;
+#board-size {
+  height: 26px;
+  text-align: center;
+  width: 50px;
 }
 
-.color , .selected {
-  border: solid black 1px;
-  height: 60px;
-  width: 60px;
-  display: inline-block;
+#useful-buttons {
+  margin-bottom: 20px;
+}
+
+#another-palette {
+  cursor: pointer;
+  height: 30px;
+  margin-right: 10px;
+  text-align: center;
+  width: 270px;
+}
+
+#clear-board {
+  cursor: pointer;
+  height: 30px;
+  text-align: center;
+  width: 75px;
+}
+
+#generate-board:hover , #another-palette:hover , #clear-board:hover {
+  background-color: grey;
+  color: white;
+}
+
+#pixel-board {
+  line-height: 0;
 }
 
 .pixel {

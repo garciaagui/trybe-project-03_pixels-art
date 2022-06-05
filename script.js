@@ -75,10 +75,10 @@ function checkInputLimitValues(value) {
   let newBoardSize = value;
   if (inputValue > 0 && inputValue < 5) {
     newBoardSize = 5;
-    window.alert('Valor inserido menor que o permitido. Consideramos 5.');
+    window.alert('O valor mínimo permitido é 5. Consideramos 5 :)');
   } else if (inputValue > 50) {
     newBoardSize = 50;
-    window.alert('Valor inserido maior que o permitido. Consideramos 50.');
+    window.alert('O valor máximo permitido é 50. Consideramos 50 :)');
   } else {
     newBoardSize = inputValue;
   }
