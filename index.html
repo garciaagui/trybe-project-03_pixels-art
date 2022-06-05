@@ -8,25 +8,29 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1 id='title'>Paleta de Cores</h1>
-  <section id='color-palette'>
-    <section class="color"></section>
-    <section class="color"></section>
-    <section class="color"></section>
-    <section class="color"></section>
-    <button id='another-palette'>Gerar Paleta de Cores Diferente!</button>
-  </section>
-  <section id='board-size-control'>
-    <label for="board-size">
-      Defina o tamanho do quadro:
-      <input type="number" id="board-size" name="" min="1">
-    </label>
-    <button id="generate-board">
-      VQV
-    </button>
-  </section>
-  <button id='clear-board'>Limpar!</button>
-  <section id ='pixel-board'></section>
+  <header>
+    <h1 id='title'>Paleta de Cores</h1>
+  </header>
+  <main>
+    <section id='color-palette'>
+      <section class="color"></section>
+      <section class="color"></section>
+      <section class="color"></section>
+      <section class="color"></section>
+      <button id='another-palette'>Gerar Paleta de Cores Diferente!</button>
+    </section>
+    <section id='board-size-control'>
+      <label for="board-size">
+        Defina o tamanho do quadro:
+        <input type="number" id="board-size" name="" min="1">
+      </label>
+      <button id="generate-board">VQV</button>
+    </section>
+    <section id='clear-section'>
+      <button id='clear-board'>Limpar!</button>
+    </section>
+    <section id ='pixel-board'></section>
+  </main>
   <script src="script.js"></script>
 </body>
 </html>
