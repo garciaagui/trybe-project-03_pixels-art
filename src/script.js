@@ -4,7 +4,7 @@ const generatePaletteButton = document.getElementById('another-palette');
 const pixelsBoard = document.getElementById('pixel-board');
 const pixelsCreated = document.getElementsByClassName('pixel');
 const clearButton = document.getElementById('clear-board');
-const generateBoardInput = document.getElementById('board-size');
+const generateBoardInput = document.getElementById('board-size-input');
 const generateBoardButton = document.getElementById('generate-board');
 
 // Criação das Funções;

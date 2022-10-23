@@ -19,17 +19,24 @@
       <section class="color"></section>
       <section class="color"></section>
     </section>
-    <section id='board-size-control'>
-      <label for="board-size">
-        Defina o tamanho do quadro:
-        <input type="number" id="board-size" name="" min="1">
-      </label>
-      <button id="generate-board">VQV</button>
+
+    <section id='board-control'>
+
+      <section id="board-size">
+        <label for="board-size-input">
+          Defina o tamanho do quadro:
+          <input type="number" id="board-size-input" name="" min="1">
+        </label>
+        <button id="generate-board">VQV</button>
+      </section>
+      
+      <section id='useful-buttons'>
+        <button id='another-palette'>Gerar Paleta de Cores Diferente</button>
+        <button id='clear-board'>Limpar</button>
+      </section>
+
     </section>
-    <section id='useful-buttons'>
-      <button id='another-palette'>Gerar Paleta de Cores Diferente!</button>
-      <button id='clear-board'>Limpar!</button>
-    </section>
+
     <section id ='pixel-board'></section>
   </main>
   <script src="script.js"></script>

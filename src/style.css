@@ -5,13 +5,13 @@
 }
 
 body {
-  font-size: normal;
   margin: 0 auto;
-  width: 80%;
+  width: 90%;
 }
 
 header {
-  margin: 40px auto 30px;
+  margin-top: 40px;
+  text-align: center;
 }
 
 #title {
@@ -22,46 +22,72 @@ header {
   font-style: italic;
 }
 
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 #color-palette {
-  margin-bottom: 20px;
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 30px 0;
+  width: 400px;
+}
+
+#color-palette section {
+  cursor: pointer;
 }
 
 .color {
   border: solid black 1px;
-  display: inline-block;
   height: 60px;
-  margin-right: 10px;
   width: 60px;
 }
 
-#board-size-control {
-  margin-bottom: 20px;
+.selected {
+  border: solid black 5px;
+}
+
+#board-control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+#board-size {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+#board-size-input {
+  cursor: pointer;
+  height: 30px;
+  text-align: center;
+  width: 70px;
 }
 
 #generate-board {
   cursor: pointer;
-  height: 30px;
+  height: 35px;
   margin-left: 10px;
   width: 50px;
 }
 
-#board-size-control label {
-  font-size: 0.9em;
-}
-
-#board-size {
-  height: 26px;
-  text-align: center;
-  width: 50px;
-}
-
 #useful-buttons {
-  margin-bottom: 20px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 #another-palette {
   cursor: pointer;
-  height: 30px;
+  height: 35px;
   margin-right: 10px;
   text-align: center;
   width: 270px;
@@ -69,22 +95,28 @@ header {
 
 #clear-board {
   cursor: pointer;
-  height: 30px;
+  height: 35px;
   text-align: center;
-  width: 75px;
+  width: 80px;
 }
 
-#generate-board:hover , #another-palette:hover , #clear-board:hover {
+button:hover {
   background-color: grey;
   color: white;
+  font-weight: 800;
 }
 
 #pixel-board {
   line-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .pixel {
   border: solid black 1px;
+  cursor: pointer;
   height: 40px;
   width: 40px;
   display: inline-block;
