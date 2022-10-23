@@ -54,6 +54,7 @@ function generatePixels(number) {
     for (let index = 1; index <= number; index += 1) {
       const newPixel = document.createElement('section');
       newPixel.setAttribute('class', 'pixel');
+      if (number > 40) newPixel.classList.add('smaller')
       newPixelLine.appendChild(newPixel);
     }
     pixelsBoard.appendChild(newPixelLine);

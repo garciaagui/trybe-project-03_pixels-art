@@ -27,6 +27,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 40px;
 }
 
 #color-palette {
@@ -120,4 +121,9 @@ button:hover {
   height: 40px;
   width: 40px;
   display: inline-block;
+}
+
+.smaller {
+  height: 32px;
+  width: 32px;
 }
