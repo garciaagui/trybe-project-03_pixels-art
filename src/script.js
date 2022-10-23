@@ -28,7 +28,12 @@ function setColors() {
 }
 
 function selectBlackColorFirst() {
-  paletteElements[0].classList.add('selected');
+  const lastSelected = document.querySelector('.selected');
+  if (!lastSelected) paletteElements[0].classList.add('selected');
+  else {
+    lastSelected.classList.remove('selected');
+    paletteElements[0].classList.add('selected');
+  }
 }
 
 function changePainter(e) {
@@ -109,6 +114,9 @@ window.addEventListener('load', () => {
 for (let i = 0; i < paletteElements.length; i += 1) {
   paletteElements[i].addEventListener('click', changePainter);
 }
-generatePaletteButton.addEventListener('click', setColors);
+generatePaletteButton.addEventListener('click', () => {
+  setColors();
+  selectBlackColorFirst();
+});
 clearButton.addEventListener('click', whiteAllPixels);
 generateBoardButton.addEventListener('click', checkInputValueValidity);
