@@ -18,7 +18,7 @@
 ## Sobre o Projeto
 Projeto 03 do curso de Desenvolvimento Web da [Trybe](https://www.betrybe.com/).
 
-Este projeto se trata da criação de um editor de arte com pixels. A pessoa usuária poderá escolher uma cor em uma paleta de cores e poderá pintar o que quiser em um quadro branco.
+Este projeto se trata da criação de um editor de arte com pixels. A pessoa usuária poderá pintar o quadro de pixels utilizando as cores disponíveis na paleta de cores, assim como gerar uma nova paleta para tornar sua arte mais única.
 
 ![Project Pixels Art][project-gif]
 
@@ -43,7 +43,7 @@ Este projeto se trata da criação de um editor de arte com pixels. A pessoa usu
   <li>Colorir o quadro de pixels com as cores disponíveis na paleta.</li>
   <li>Definir diferentes tamanhos de quadro.</li>
   <li>Gerar uma nova paleta de cores.</li>
-  <li>Limpar o quadro de pixels, possibilitando a criação de uma nova arte.</li>
+  <li>Limpar o quadro de pixels, permitindo a criação de uma nova arte.</li>
 </ul>
 
 <p align="right"><a href="#readme-top">Voltar ao topo</a></p>
