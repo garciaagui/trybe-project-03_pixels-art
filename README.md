@@ -20,7 +20,7 @@ Projeto 03 do curso de Desenvolvimento Web da [Trybe](https://www.betrybe.com/).
 
 Este projeto se trata da criação de um editor de arte com pixels. A pessoa usuária poderá pintar o quadro de pixels utilizando as cores disponíveis na paleta de cores, assim como gerar uma nova paleta para tornar sua arte mais única.
 
-![Project Pixels Art][project-gif]
+![Project Pixels Art][project-demo]
 
 <p align="right"><a href="#readme-top">Voltar ao topo</a></p>
 
@@ -31,8 +31,8 @@ Este projeto se trata da criação de um editor de arte com pixels. A pessoa usu
 
 ## Habilidades
 <ul>
-  <li>Integração de HTML, CSS e JavaScript para criação de uma aplicação.</li>
-  <li>Manipulação de elementos HTML com JavaScript através dos seletores do DOM (Document Object Model).</li>
+  <li>Integração de HTML5, CSS3 e JavaScript para criação de uma aplicação.</li>
+  <li>Manipulação de elementos HTML5 com JavaScript através dos seletores do DOM (Document Object Model).</li>
   <li>Utilização de eventos do JavaScript para executar funções de acordo com as interações da pessoa usuária.</li>
 </ul>
 
@@ -74,7 +74,7 @@ Guilherme Garcia - garciaguig@gmail.com
 <p align="right"><a href="#readme-top">Voltar ao topo</a></p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[project-gif]: /project-gif.gif
+[project-demo]: /project-demo.gif
 [html5-url]: https://developer.mozilla.org/en-US/docs/Web/HTML
 [html5-badge]: https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
 [css3-url]: https://developer.mozilla.org/en-US/docs/Web/CSS
